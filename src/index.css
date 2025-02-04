@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* right: ; */
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-areas:
+    "content" "content" "content" "content" "content"
+    "content" "content" "content" "arrow" "arrow";
+  overflow: hidden;
+}
+.content {
+  grid-area: content;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.arrow {
+  grid-area: arrow;
+  border: 1px solid;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
