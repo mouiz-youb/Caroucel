@@ -43,8 +43,59 @@ function Content() {
       x: "50%",
     },
   };
+  const imagevariants2 = {
+    center: {
+      // x: "0",
+      // scale: 1,
+      zIndex: 5,
+      width: "40%",
+      top: "30%",
+      opacity: 1,
+      // height: "50%",
+      left: "10%",
+    },
+    left1: {
+      // x: "-30%",
+      // scale: 0.7,
+      zIndex: 3,
+      width: "20%",
+      top: "25%",
+      opacity: 0.5,
+
+      left: "30%",
+    },
+    left: {
+      // scale: 0.5,
+      // x: "-90%",
+      zIndex: 3,
+      width: "20%",
+      top: "25%",
+      opacity: 0.5,
+
+      left: "50%",
+    },
+    right: {
+      // scale: 0.5,
+      // x: "90%",
+      zIndex: 3,
+      width: "20%",
+      top: "25%",
+      opacity: 0.5,
+
+      left: "70%",
+    },
+    right1: {
+      // scale: 0.7,
+      zIndex: 3,
+      width: "20%",
+      top: "25%",
+      opacity: 0.5,
+
+      left: "90%",
+    },
+  };
   return (
-    <div className="flex justify-center items-center h-screen flex-col bg-black ">
+    <div className="flex justify-center items-center h-screen flex-col bg-black gap-5 ">
       {images.map((image, index) => (
         <motion.img
           key={index}
@@ -52,7 +103,7 @@ function Content() {
           className={`rounded-[12px]`}
           initial="center"
           animate={positions[positionIndex[index]]}
-          variants={imagevariants}
+          variants={imagevariants2}
           transition={{ duration: 0.5 }}
           style={{ position: "absolute", width: "40%" }}
         />
